@@ -2,7 +2,7 @@ import { getServerSession } from 'next-auth'
 import Login from '../components/Login'
 import { SessionProvider } from '../components/SessionProvider'
 import SideBar from '../components/SideBar'
-import { authOptions } from '../pages/api/auth/[...nextAuth]'
+import { authOptions } from '../pages/api/auth/[...nextauth]'
 import '../styles/globals.css'
 
 export default async function RootLayout({
@@ -22,7 +22,6 @@ export default async function RootLayout({
             <Login />
           ) : (
             <div className='flex'>
-              {/* SideBar  */}
               <div className='bg-[#202123] max-w-xs h-screen overflow-y-auto md:min-w-[20rem]'>
                 <SideBar />
               </div>
