@@ -13,11 +13,10 @@ function SideBar() {
 
     const [chats, loading, error] = useCollection(
         session && query(
-            collection(db, 'users', session.user?.email!, 'chats'),
+            collection(db, 'users', session?.user?.email!, 'chats'),
             orderBy('createdAt', 'asc')
         )
     )
-    console.log(chats)
     return (
         <div className="p-2 flex flex-col h-screen">
             <div className="flex-1">
@@ -41,7 +40,7 @@ function SideBar() {
                     </div>
                 </div>
             </div>
-            {session && <img onClick={() => signOut()} className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50" src={session.user?.image!} alt="Profile pic" />}
+            {session && <img onClick={() => signOut()} title="logout" className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50" src={session.user?.image!} alt="Profile pic" />}
         </div>
     )
 }

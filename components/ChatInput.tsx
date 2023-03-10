@@ -52,7 +52,7 @@ function ChatInput({ chatId }: Props) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                promt: input,
+                prompt: input,
                 chatId,
                 model,
                 session
