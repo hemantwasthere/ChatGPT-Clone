@@ -74,6 +74,7 @@ function ChatInput({ chatId }: Props) {
                     value={prompt}
                     onChange={(e) => setPropmt(e.target.value)} type="text" placeholder='Type your message here...' />
                 <button
+                    title={`${!prompt ? 'disabled' : 'press or hit enter'}`}
                     className='bg-[#11A37F] hover:opacity-50 text-white font-bold px-4 py-2 rounded disabled:bg-gray-300 disabled:cursor-not-allowed'
                     disabled={!prompt || !session}
                     type='submit'>
@@ -81,8 +82,8 @@ function ChatInput({ chatId }: Props) {
                 </button>
             </form>
 
-            <div  className='md:hidden  ' >
-                <ModelSelection/>
+            <div className='md:hidden  ' >
+                <ModelSelection />
             </div>
         </div>
     )
