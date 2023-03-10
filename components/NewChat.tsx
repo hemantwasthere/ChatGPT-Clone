@@ -20,7 +20,7 @@ function NewChat() {
     }
 
     return (
-        <div onClick={createNewChat} title="create new chat" className='border-gray-700 border chatRow flex flex-col space-y-2 xxs:flex-row xxs:space-y-0 text-center justify-center '>
+        <div onClick={createNewChat} title="create new chat" className='border-gray-700 border chatRow flex flex-col space-y-2 space-x-0 xxs:space-x-2 xxs:flex-row xxs:space-y-0 text-center justify-center '>
             <PlusIcon className='h-4 w-4' />
             <p>New Chat</p>
         </div>
